@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Matrix</title>
+</head>
+<body>
+    <div class="header">
+        <p class="">Калькулятор Матриц 1.0</p>
+    </div>
+    <div class="input-block">
+        <div class="block">
+            <div class="block-line">
+	            <input class="input" id="num1" placeholder="a11">
+                <input class="input" id="num2" placeholder="a12">
+                <input class="input" id="num3" placeholder="a13">
+            </div>
+            <div class="block-line">
+	            <input class="input" id="num4" placeholder="a21">
+                <input class="input" id="num5" placeholder="a22">
+                <input class="input" id="num6" placeholder="a23">
+            </div>
+            <div class="block-line">
+	            <input class="input" id="num7" placeholder="a31">
+                <input class="input" id="num8" placeholder="a32">
+                <input class="input" id="num9" placeholder="a33">
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-line">
+	            <input class="input" id="num1_" placeholder="a11">
+                <input class="input" id="num2_" placeholder="a12">
+                <input class="input" id="num3_" placeholder="a13">
+            </div>
+            <div class="block-line">
+	            <input class="input" id="num4_" placeholder="a21">
+                <input class="input" id="num5_" placeholder="a22">
+                <input class="input" id="num6_" placeholder="a23">
+            </div>
+            <div class="block-line">
+	            <input class="input" id="num7_" placeholder="a31">
+                <input class="input" id="num8_" placeholder="a32">
+                <input class="input" id="num9_" placeholder="a33">
+            </div>
+        </div>
+    </div>
+
+	<div class="operator-btns" id="operator-btns">
+        <button class="btn" id="plus" onclick=" act='+' ">+</button>
+        <button class="btn" id="minus" onclick=" act='-' ">-</button>
+        
+    </div>
+
+    <div class="result-block">
+	    <div class="result-btn">
+            <button onclick="func()">Посчитать</button>
+        </div>
+        <div class="result-p">
+            <div class="result-line">
+                <p class="result" id="result"></p>
+                <p class="result" id="result2"></p>
+                <p class="result" id="result3"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="result4"></p>
+                <p class="result" id="result5"></p>
+                <p class="result" id="result6"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="result7"></p>
+                <p class="result" id="result8"></p>
+                <p class="result" id="result9"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
