@@ -1,94 +1,35 @@
 function func() {
-    var result;
-    var result2;
-    var result3;
-    var result4;
-    var result5;
-    var result6;
-    var result7;
-    var result8;
-    var result9;
-
-    var num1 = Number(document.getElementById("num1").value);
-    var num1_ = Number(document.getElementById("num1_").value);
-    var num2 = Number(document.getElementById("num2").value);
-    var num2_ = Number(document.getElementById("num2_").value);
-    var num3 = Number(document.getElementById("num3").value);
-    var num3_ = Number(document.getElementById("num4_").value);
-    var num4 = Number(document.getElementById("num4").value);
-    var num4_ = Number(document.getElementById("num4_").value);
-    var num5 = Number(document.getElementById("num5").value);
-    var num5_ = Number(document.getElementById("num5_").value);
-    var num6 = Number(document.getElementById("num6").value);
-    var num6_ = Number(document.getElementById("num6_").value);
-    var num7 = Number(document.getElementById("num7").value);
-    var num7_ = Number(document.getElementById("num7_").value);
-    var num8 = Number(document.getElementById("num8").value);
-    var num8_ = Number(document.getElementById("num8_").value);
-    var num9 = Number(document.getElementById("num9").value);
-    var num9_ = Number(document.getElementById("num9_").value);
-
-    if (act == '+') {
-        result = num1 + num1_;
-    } else if (act == '-') {
-        result = num1 - num1_;
+    const numbers = [
+        ["num1", "num1_"],
+        ["num2", "num2_"],
+        ["num3", "num3_"],
+        ["num4", "num4_"],
+        ["num5", "num5_"],
+        ["num6", "num6_"],
+        ["num7", "num7_"],
+        ["num8", "num8_"],
+        ["num9", "num9_"]
+    ];
+      
+    numbers.forEach(([num, num_]) => {
+        window[num] = Number(document.getElementById(num).value);
+        window[num_] = Number(document.getElementById(num_).value);
+    });
+      
+    if (act == '+' || act == '-') {
+        result1 = (act == '+') ? num1 + num1_ : num1 - num1_;
+        result2 = (act == '+') ? num2 + num2_ : num2 - num2_;
+        result3 = (act == '+') ? num3 + num3_ : num3 - num3_;
+        result4 = (act == '+') ? num4 + num4_ : num4 - num4_;
+        result5 = (act == '+') ? num5 + num5_ : num5 - num5_;
+        result6 = (act == '+') ? num6 + num6_ : num6 - num6_;
+        result7 = (act == '+') ? num7 + num7_ : num7 - num7_;
+        result8 = (act == '+') ? num8 + num8_ : num8 - num8_;
+        result9 = (act == '+') ? num9 + num9_ : num9 - num9_;
     }
-
-    if (act == '+') {
-        result2 = num2 + num2_;
-    } else if (act == '-') {
-        result2 = num2 - num2_;
+    
+    const results = [result1, result2, result3, result4, result5, result6, result7, result8, result9];
+    for (let i = 0; i < results.length; i++) {
+        document.getElementById(`result${i + 1}`).innerHTML = results[i];
     }
-
-    if (act == '+') {
-        result3 = num3 + num3_;
-    } else if (act == '-') {
-        result3 = num3 - num3_;
-    }
-
-    if (act == '+') {
-        result4 = num4 + num4_;
-    } else if (act == '-') {
-        result4 = num4 - num4_;
-    }
-
-    if (act == '+') {
-        result5 = num5 + num5_;
-    } else if (act == '-') {
-        result5 = num5 - num5_;
-    }
-
-    if (act == '+') {
-        result6 = num6 + num6_;
-    } else if (act == '-') {
-        result6 = num6 - num6_;
-    }
-
-    if (act == '+') {
-        result7 = num7 + num7_;
-    } else if (act == '-') {
-        result7 = num7 - num7_;
-    }
-
-    if (act == '+') {
-        result8 = num8 + num8_;
-    } else if (act == '-') {
-        result8 = num8 - num8_;
-    }
-
-    if (act == '+') {
-        result9 = num9 + num9_;
-    } else if (act == '-') {
-        result9 = num9 - num9_;
-    }
-
-    document.getElementById("result").innerHTML = result;
-    document.getElementById("result2").innerHTML = result2;
-    document.getElementById("result3").innerHTML = result3;
-    document.getElementById("result4").innerHTML = result4;
-    document.getElementById("result5").innerHTML = result5;
-    document.getElementById("result6").innerHTML = result6;
-    document.getElementById("result7").innerHTML = result7;
-    document.getElementById("result8").innerHTML = result8;
-    document.getElementById("result9").innerHTML = result9;
 }
