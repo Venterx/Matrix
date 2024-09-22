@@ -4,58 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./js/main.js"></script>
     <title>Matrix</title>
 </head>
 <body>
     <div class="header">
-        <p class="">Калькулятор Матриц 1.0</p>
+        <p class="">Калькулятор Матриц 2.0</p>
     </div>
+
     <div class="input-block">
-        <div class="block">
-            <div class="block-line">
-	            <input class="input" id="num1" placeholder="a11">
-                <input class="input" id="num2" placeholder="a12">
-                <input class="input" id="num3" placeholder="a13">
+        <form id="form" class="df">
+            <div class="block">
+                <div class="block-line">
+                    <input class="input" id="num1" placeholder="a11" type="number">
+                    <input class="input" id="num2" placeholder="a12" type="number">
+                    <input class="input" id="num3" placeholder="a13" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="num4" placeholder="a21" type="number">
+                    <input class="input" id="num5" placeholder="a22" type="number">
+                    <input class="input" id="num6" placeholder="a23" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="num7" placeholder="a31" type="number">
+                    <input class="input" id="num8" placeholder="a32" type="number">
+                    <input class="input" id="num9" placeholder="a33" type="number">
+                </div>
             </div>
-            <div class="block-line">
-	            <input class="input" id="num4" placeholder="a21">
-                <input class="input" id="num5" placeholder="a22">
-                <input class="input" id="num6" placeholder="a23">
+            <div class="block">
+                <div class="block-line">
+                    <input class="input" id="num1_" placeholder="a11" type="number">
+                    <input class="input" id="num2_" placeholder="a12" type="number">
+                    <input class="input" id="num3_" placeholder="a13" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="num4_" placeholder="a21" type="number">
+                    <input class="input" id="num5_" placeholder="a22" type="number">
+                    <input class="input" id="num6_" placeholder="a23" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="num7_" placeholder="a31" type="number">
+                    <input class="input" id="num8_" placeholder="a32" type="number">
+                    <input class="input" id="num9_" placeholder="a33" type="number">
+                </div>
             </div>
-            <div class="block-line">
-	            <input class="input" id="num7" placeholder="a31">
-                <input class="input" id="num8" placeholder="a32">
-                <input class="input" id="num9" placeholder="a33">
-            </div>
-        </div>
-        <div class="block">
-            <div class="block-line">
-	            <input class="input" id="num1_" placeholder="a11">
-                <input class="input" id="num2_" placeholder="a12">
-                <input class="input" id="num3_" placeholder="a13">
-            </div>
-            <div class="block-line">
-	            <input class="input" id="num4_" placeholder="a21">
-                <input class="input" id="num5_" placeholder="a22">
-                <input class="input" id="num6_" placeholder="a23">
-            </div>
-            <div class="block-line">
-	            <input class="input" id="num7_" placeholder="a31">
-                <input class="input" id="num8_" placeholder="a32">
-                <input class="input" id="num9_" placeholder="a33">
-            </div>
-        </div>
+        </form>
     </div>
 
 	<div class="operator-btns" id="operator-btns">
         <button class="btn" id="plus" onclick=" act='+' ">+</button>
         <button class="btn" id="minus" onclick=" act='-' ">-</button>
-        
     </div>
 
     <div class="result-block">
 	    <div class="result-btn">
             <button onclick="func()">Посчитать</button>
+            <button onclick="document.getElementById('form').reset()" type="button" id="clear" value="reset">Очистить</button>
         </div>
         <div class="result-p">
             <div class="result-line">
@@ -76,6 +80,41 @@
         </div>
     </div>
 
-    <script src="./js/main.js"></script>
+    <div class="title-determinant">
+        <p class="">Найти определитель</p>
+    </div>
+
+    <div class="determinant-block">
+        <div class="block">
+            <form id="form2">
+                <div class="block-line">
+                    <input class="input" id="numb1" placeholder="a11" type="number">
+                    <input class="input" id="numb2" placeholder="a12" type="number">
+                    <input class="input" id="numb3" placeholder="a13" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="numb4" placeholder="a21" type="number">
+                    <input class="input" id="numb5" placeholder="a22" type="number">
+                    <input class="input" id="numb6" placeholder="a23" type="number">
+                </div>
+                <div class="block-line">
+                        <input class="input" id="numb7" placeholder="a31" type="number">
+                        <input class="input" id="numb8" placeholder="a32" type="number">
+                        <input class="input" id="numb9" placeholder="a33" type="number">
+                </div>
+            </form>
+        </div>
+
+        <div class="determinant-btn">
+            <button onclick="func2()">Посчитать</button>
+            <button onclick="document.getElementById('form2').reset()" type="button" id="clear" value="reset">Очистить</button>
+        </div>
+
+        <div class="determinant-result">
+            <p class="determinant" id="determinant"></p>
+        </div>
+    </div>
+
+    
 </body>
 </html>

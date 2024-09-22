@@ -1,13 +1,9 @@
 function func() {
     const numbers = [
-        ["num1", "num1_"],
-        ["num2", "num2_"],
-        ["num3", "num3_"],
-        ["num4", "num4_"],
-        ["num5", "num5_"],
-        ["num6", "num6_"],
-        ["num7", "num7_"],
-        ["num8", "num8_"],
+        ["num1", "num1_"],["num2", "num2_"],
+        ["num3", "num3_"],["num4", "num4_"],
+        ["num5", "num5_"],["num6", "num6_"],
+        ["num7", "num7_"],["num8", "num8_"],
         ["num9", "num9_"]
     ];
       
@@ -33,3 +29,37 @@ function func() {
         document.getElementById(`result${i + 1}`).innerHTML = results[i];
     }
 }
+
+function func2 () {
+    const numbers = [
+        ["numb1"],["numb2"],["numb3"],
+        ["numb4"],["numb5"],["numb6"],
+        ["numb7"],["numb8"],["numb9"]
+    ];
+
+    numbers.forEach(([numb])=> {
+        window[numb] = Number(document.getElementById(numb).value);
+    });
+    
+    numb1 = numb1 === '' ? 0 : numb1;
+    numb2 = numb2 === '' ? 0 : numb2;
+    numb3 = numb3 === '' ? 0 : numb3;
+    numb4 = numb4 === '' ? 0 : numb4;
+    numb5 = numb5 === '' ? 0 : numb5;
+    numb6 = numb6 === '' ? 0 : numb6;
+    numb7 = numb7 === '' ? 0 : numb7;
+    numb8 = numb8 === '' ? 0 : numb8;
+    numb8 = numb9 === '' ? 0 : numb9;
+
+    if (numb1.value != '') {
+        sum1 = (numb1 * numb5 * numb9) + (numb2 * numb6 * numb7) + (numb3 * numb4 * numb8);
+        sum2 = (numb3 * numb5 * numb7) + (numb2 * numb4 * numb9) + (numb1 * numb6 * numb8);
+        determinant = (sum1 - sum2);
+    } else {
+        determinant = "?"
+    }
+
+
+    document.getElementById("determinant").innerHTML = determinant;
+}
+
