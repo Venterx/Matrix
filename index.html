@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <p class="">Калькулятор Матриц 2.0</p>
+        <p class="">Калькулятор Матриц 3.0</p>
     </div>
 
     <div class="input-block">
@@ -98,9 +98,9 @@
                     <input class="input" id="numb6" placeholder="a23" type="number">
                 </div>
                 <div class="block-line">
-                        <input class="input" id="numb7" placeholder="a31" type="number">
-                        <input class="input" id="numb8" placeholder="a32" type="number">
-                        <input class="input" id="numb9" placeholder="a33" type="number">
+                    <input class="input" id="numb7" placeholder="a31" type="number">
+                    <input class="input" id="numb8" placeholder="a32" type="number">
+                    <input class="input" id="numb9" placeholder="a33" type="number">
                 </div>
             </form>
         </div>
@@ -113,6 +113,46 @@
         <div class="determinant-result">
             <p class="determinant" id="determinant"></p>
         </div>
+    </div>
+    <div class="deter-block">
+        <div class="block2">
+            <form id="form3">
+                <div class="block-line">
+                    <input class="input" id="numbr1" placeholder="a11" type="number">
+                    <input class="input" id="numbr2" placeholder="a12" type="number">
+                    <input class="input" id="numbr3" placeholder="a13" type="number">
+                    <input class="input" id="numbr4" placeholder="a14" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="numbr5" placeholder="a21" type="number">
+                    <input class="input" id="numbr6" placeholder="a22" type="number">
+                    <input class="input" id="numbr7" placeholder="a23" type="number">
+                    <input class="input" id="numbr8" placeholder="a24" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="numbr9" placeholder="a31" type="number">
+                    <input class="input" id="numbr10" placeholder="a32" type="number">
+                    <input class="input" id="numbr11" placeholder="a33" type="number">
+                    <input class="input" id="numbr12" placeholder="a34" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="numbr13" placeholder="a41" type="number">
+                    <input class="input" id="numbr14" placeholder="a42" type="number">
+                    <input class="input" id="numbr15" placeholder="a43" type="number">
+                    <input class="input" id="numbr16" placeholder="a44" type="number">
+                </div>
+            </form>
+        </div>
+        <div class="determinant-btn">
+            <button onclick="func3()">Посчитать</button>
+            <button onclick="document.getElementById('form3').reset()" type="button" id="clear" value="reset">Очистить</button>
+        </div>
+        <div class="determinant-result">
+            <p class="determinant" id="resultat"></p>
+        </div>
+    </div>
+    <div class="formula">
+        <p class="" id="formula"></p>
     </div>
 
     

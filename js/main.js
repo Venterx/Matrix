@@ -63,3 +63,64 @@ function func2 () {
     document.getElementById("determinant").innerHTML = determinant;
 }
 
+function func3() {
+    const numbers = [
+        ["numbr1"],["numbr2"],["numbr3"],["numbr4"],
+        ["numbr5"],["numbr6"],["numbr7"],["numbr8"],
+        ["numbr9"],["numbr10"],["numbr11"],["numbr12"],
+        ["numbr13"],["numbr14"],["numbr15"],["numbr16"],
+    ];
+
+    numbers.forEach(([numbr])=> {
+        window[numbr] = Number(document.getElementById(numbr).value);
+    });
+
+    numbr1 = numbr1 === '' ? 0 : numbr1;
+    numbr2 = numbr2 === '' ? 0 : numbr2;
+    numbr3 = numbr3 === '' ? 0 : numbr3;
+    numbr4 = numbr4 === '' ? 0 : numbr4;
+    numbr5 = numbr5 === '' ? 0 : numbr5;
+    numbr6 = numbr6 === '' ? 0 : numbr6;
+    numbr7 = numbr7 === '' ? 0 : numbr7;
+    numbr8 = numbr8 === '' ? 0 : numbr8;
+    numbr9 = numbr9 === '' ? 0 : numbr9;
+    numbr10 = numbr10 === '' ? 0 : numbr10;
+    numbr11 = numbr11 === '' ? 0 : numbr11;
+    numbr12 = numbr12 === '' ? 0 : numbr12;
+    numbr13 = numbr13 === '' ? 0 : numbr13;
+    numbr14 = numbr14 === '' ? 0 : numbr14;
+    numbr15 = numbr15 === '' ? 0 : numbr15;
+    numbr16 = numbr16 === '' ? 0 : numbr16;
+
+    if (numbr1.value != '') {
+        sum1 = (numbr6 * numbr11 * numbr16) + (numbr10 * numbr15 * numbr8) + (numbr7 * numbr12 * numbr14);
+        sum2 = (numbr14 * numbr11 * numbr8) + (numbr7 * numbr10 * numbr16) + (numbr6 * numbr12 * numbr15);
+        res1 = (sum1 - sum2);
+
+        sum3 = (numbr2 * numbr11 * numbr16) + (numbr10 * numbr15 * numbr4) + (numbr3 * numbr14 * numbr12);
+        sum4 = (numbr14 * numbr11 * numbr4) + (numbr10 * numbr3 * numbr16) + (numbr2 * numbr12 * numbr15);
+        res2 = (sum3 - sum4);
+
+        sum5 = (numbr2 * numbr7 * numbr16) + (numbr4 * numbr6 * numbr15) + (numbr3 * numbr8 * numbr14);
+        sum6 = (numbr14 * numbr7 * numbr4) + (numbr6 * numbr3 * numbr16) + (numbr2 * numbr8 * numbr15);
+        res3 = (sum5 - sum6);
+
+        sum7 = (numbr2 * numbr7 * numbr12) + (numbr4 * numbr6 * numbr11) + (numbr3 * numbr8 * numbr10);
+        sum8 = (numbr10 * numbr7 * numbr4) + (numbr3 * numbr6 * numbr12) + (numbr2 * numbr8 * numbr11);
+        res4 = (sum7 - sum8);
+
+        number5 = numbr5 * -1;
+        number13 = numbr13 * -1;
+
+        block1 = numbr1 * res1;
+        block2 = number5 * res2;
+        block3 = numbr9 * res3;
+        block4 = number13 * res4;
+
+        resultat = block1 + block2 + block3 + block4;
+        formula = `${resultat} = (${numbr1} * ${res1}) + (${number5} * ${res2}) + (${numbr9} * ${res3}) + (${number13} * ${res4})`;
+    }
+
+    document.getElementById("resultat").innerHTML = resultat;
+    document.getElementById("formula").innerHTML = formula;
+}

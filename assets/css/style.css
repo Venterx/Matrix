@@ -176,7 +176,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .determinant {
-    width: 32px;
+    width: 64px;
     height: 32px;
     background-color: #fff;
     border-radius: 5px;
@@ -185,4 +185,77 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* ----------------------------------------------- */
+
+.deter-block {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block2 {
+    width: 132px;
+    height: 132px;
+}
+
+.formula {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.formula p {
+    background-color: transparent;
+    width: 380px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+
+@media (max-width:430px ) {
+    .header p{
+        font-size: 24px;
+        width: 325px;
+        text-align: center;
+    }
+
+    .title-determinant p{
+        font-size: 24px;
+    }
+
+    .result-btn {
+        margin-bottom: 20px;
+    }
+
+    .title-determinant {
+        margin-top: 20px;
+    }
+
+    .determinant-block {
+        width: 300px;
+    }
+
+    .deter-block {
+        width: 300px;
+    }
+
+    .determinant-btn button {
+        width: 75px;
+    }
+
+    .formula {
+        width: 300px;
+    }
+
+    .formula p{
+        width: 290px;
+    }
 }
