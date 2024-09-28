@@ -9,10 +9,14 @@
 </head>
 <body>
     <div class="header">
-        <p class="">Калькулятор Матриц 3.0</p>
+        <p class="">Калькулятор Матриц 4.0</p>
     </div>
 
-    <div class="input-block">
+    <div class="input-block" id="input-block">
+        <div class="remove-btns">
+            <button onclick="removeMatrix3by3()">3 на 3</button>
+            <button onclick="removeMatrix4by4()">4 на 4</button>
+        </div>
         <form id="form" class="df">
             <div class="block">
                 <div class="block-line">
@@ -31,6 +35,7 @@
                     <input class="input" id="num9" placeholder="a33" type="number">
                 </div>
             </div>
+
             <div class="block">
                 <div class="block-line">
                     <input class="input" id="num1_" placeholder="a11" type="number">
@@ -48,18 +53,75 @@
                     <input class="input" id="num9_" placeholder="a33" type="number">
                 </div>
             </div>
+
+            <div class="blocky">
+                <div class="block-line2">
+                    <input class="input" id="Num1" placeholder="a11" type="number">
+                    <input class="input" id="Num2" placeholder="a12" type="number">
+                    <input class="input" id="Num3" placeholder="a13" type="number">
+                    <input class="input" id="Num4" placeholder="a14" type="number">
+                </div>
+                <div class="block-line2">
+                    <input class="input" id="Num5" placeholder="a21" type="number">
+                    <input class="input" id="Num6" placeholder="a22" type="number">
+                    <input class="input" id="Num7" placeholder="a23" type="number">
+                    <input class="input" id="Num8" placeholder="a24" type="number">
+                </div>
+                <div class="block-line2">
+                    <input class="input" id="Num9" placeholder="a31" type="number">
+                    <input class="input" id="Num10" placeholder="a32" type="number">
+                    <input class="input" id="Num11" placeholder="a33" type="number">
+                    <input class="input" id="Num12" placeholder="a34" type="number">
+                </div>
+                <div class="block-line2">
+                    <input class="input" id="Num13" placeholder="a41" type="number">
+                    <input class="input" id="Num14" placeholder="a42" type="number">
+                    <input class="input" id="Num15" placeholder="a43" type="number">
+                    <input class="input" id="Num16" placeholder="a44" type="number">
+                </div>
+            </div>
+
+            <div class="blocky">
+                <div class="block-line2">
+                    <input class="input" id="Num1_" placeholder="a11" type="number">
+                    <input class="input" id="Num2_" placeholder="a12" type="number">
+                    <input class="input" id="Num3_" placeholder="a13" type="number">
+                    <input class="input" id="Num4_" placeholder="a14" type="number">
+                </div>
+                <div class="block-line2">
+                    <input class="input" id="Num5_" placeholder="a21" type="number">
+                    <input class="input" id="Num6_" placeholder="a22" type="number">
+                    <input class="input" id="Num7_" placeholder="a23" type="number">
+                    <input class="input" id="Num8_" placeholder="a24" type="number">
+                </div>
+                <div class="block-line2">
+                    <input class="input" id="Num9_" placeholder="a31" type="number">
+                    <input class="input" id="Num10_" placeholder="a32" type="number">
+                    <input class="input" id="Num11_" placeholder="a33" type="number">
+                    <input class="input" id="Num12_" placeholder="a34" type="number">
+                </div>
+                <div class="block-line2">
+                    <input class="input" id="Num13_" placeholder="a41" type="number">
+                    <input class="input" id="Num14_" placeholder="a42" type="number">
+                    <input class="input" id="Num15_" placeholder="a43" type="number">
+                    <input class="input" id="Num16_" placeholder="a44" type="number">
+                </div>
+            </div>
         </form>
     </div>
 
 	<div class="operator-btns" id="operator-btns">
         <button class="btn" id="plus" onclick=" act='+' ">+</button>
         <button class="btn" id="minus" onclick=" act='-' ">-</button>
+        <button class="btn" id="multiply" onclick=" act='*' ">*</button>
     </div>
 
     <div class="result-block">
 	    <div class="result-btn">
-            <button onclick="func()">Посчитать</button>
+            <button id="counter" onclick="counter()">Посчитать</button>
+            <button id="counter4by4" onclick="counter4by4()">Посчитать</button>
             <button onclick="document.getElementById('form').reset()" type="button" id="clear" value="reset">Очистить</button>
+            
         </div>
         <div class="result-p">
             <div class="result-line">
@@ -76,6 +138,32 @@
                 <p class="result" id="result7"></p>
                 <p class="result" id="result8"></p>
                 <p class="result" id="result9"></p>
+            </div>
+        </div>
+        <div class="result-q">
+            <div class="result-line">
+                <p class="result" id="Result1"></p>
+                <p class="result" id="Result2"></p>
+                <p class="result" id="Result3"></p>
+                <p class="result" id="Result4"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="Result5"></p>
+                <p class="result" id="Result6"></p>
+                <p class="result" id="Result7"></p>
+                <p class="result" id="Result8"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="Result9"></p>
+                <p class="result" id="Result10"></p>
+                <p class="result" id="Result11"></p>
+                <p class="result" id="Result12"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="Result13"></p>
+                <p class="result" id="Result14"></p>
+                <p class="result" id="Result15"></p>
+                <p class="result" id="Result16"></p>
             </div>
         </div>
     </div>
@@ -106,7 +194,7 @@
         </div>
 
         <div class="determinant-btn">
-            <button onclick="func2()">Посчитать</button>
+            <button onclick="countDeterminant()">Посчитать</button>
             <button onclick="document.getElementById('form2').reset()" type="button" id="clear" value="reset">Очистить</button>
         </div>
 

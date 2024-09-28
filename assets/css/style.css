@@ -10,10 +10,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-.input {
-    border-radius: 5px;
-}
-
 .header {
     background-color: grey;
     padding: 30px 0 30px 0;
@@ -28,12 +24,35 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: transparent;
 }
 
+
 .input-block {
     padding-top: 30px;
     padding-bottom: 30px;
     margin: auto;
-    width: 240px;
+    width: 300px;
 }
+
+.remove-btns {
+    margin: auto;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.remove-btns button {
+    width: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.remove-btns button:focus {
+    background-color: lightgrey;
+}
+
 
 .df {
     display: flex;
@@ -44,9 +63,24 @@ input[type="number"]::-webkit-outer-spin-button {
 .block {
     width: 100px;
     height: 100px;
+    background-color: lightblue;
+}
+
+.blocky {
+    width: 133px;
+    height: 133px;
+}
+
+.input {
+    border-radius: 5px;
 }
 
 .block-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.block-line2 {
     display: flex;
     flex-direction: row;
 }
@@ -78,7 +112,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .btn:focus {
     background-color: lightgrey;
-
+    transition: all 0.1s ease-in-out;
 }
 
 .result-block {
@@ -104,6 +138,11 @@ input[type="number"]::-webkit-outer-spin-button {
 .result-p {
     margin: auto;
     width: 95px;
+}
+
+.result-q {
+    margin: auto;
+    width: 133px;
 }
 
 .result-line {
@@ -198,8 +237,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .block2 {
-    width: 132px;
-    height: 132px;
+    width: 133px;
+    height: 133px;
 }
 
 .formula {
