@@ -9,8 +9,10 @@
 </head>
 <body>
     <div class="header">
-        <p class="">Калькулятор Матриц 4.0</p>
+        <p class="">Калькулятор Матриц 5.0</p>
     </div>
+
+<!---------------------------------------------->
 
     <div class="input-block" id="input-block">
         <div class="remove-btns">
@@ -168,8 +170,10 @@
         </div>
     </div>
 
+<!---------------------------------------------->
+
     <div class="title-determinant">
-        <p class="">Найти определитель</p>
+        <p class="name-determinant">Найти определитель</p>
     </div>
 
     <div class="determinant-block">
@@ -232,7 +236,7 @@
             </form>
         </div>
         <div class="determinant-btn">
-            <button onclick="func3()">Посчитать</button>
+            <button onclick="countDeterminant()">Посчитать</button>
             <button onclick="document.getElementById('form3').reset()" type="button" id="clear" value="reset">Очистить</button>
         </div>
         <div class="determinant-result">
@@ -243,6 +247,81 @@
         <p class="" id="formula"></p>
     </div>
 
-    
+<!---------------------------------------------->
+
+    <div class="title-determinant">
+        <p class="name-determinant">Обратная матрица</p>
+    </div>
+    <div class="determinant-block">
+        <div class="block">
+            <form id="form4">
+                <div class="block-line">
+                    <input class="input" id="NUMBER1" placeholder="a11" type="number">
+                    <input class="input" id="NUMBER2" placeholder="a12" type="number">
+                    <input class="input" id="NUMBER3" placeholder="a13" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="NUMBER4" placeholder="a21" type="number">
+                    <input class="input" id="NUMBER5" placeholder="a22" type="number">
+                    <input class="input" id="NUMBER6" placeholder="a23" type="number">
+                </div>
+                <div class="block-line">
+                    <input class="input" id="NUMBER7" placeholder="a31" type="number">
+                    <input class="input" id="NUMBER8" placeholder="a32" type="number">
+                    <input class="input" id="NUMBER9" placeholder="a33" type="number">
+                </div>
+            </form>
+        </div>
+        <div class="result-i">
+            <div class="result-line">
+                <p class="result" id="REST1"></p>
+                <p class="result" id="REST2"></p>
+                <p class="result" id="REST3"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="REST4"></p>
+                <p class="result" id="REST5"></p>
+                <p class="result" id="REST6"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="REST7"></p>
+                <p class="result" id="REST8"></p>
+                <p class="result" id="REST9"></p>
+            </div>
+        </div>
+        <div class="result-i">
+            <div class="result-line">
+                <p class="result" id="RESULT1"></p>
+                <p class="result" id="RESULT2"></p>
+                <p class="result" id="RESULT3"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="RESULT4"></p>
+                <p class="result" id="RESULT5"></p>
+                <p class="result" id="RESULT6"></p>
+            </div>
+            <div class="result-line">
+                <p class="result" id="RESULT7"></p>
+                <p class="result" id="RESULT8"></p>
+                <p class="result" id="RESULT9"></p>
+            </div>
+        </div>
+    </div>
+    <div class="determinant-btn">
+        <button onclick="countDeterminant4by4()">Посчитать</button>
+        <button onclick="document.getElementById('form4').reset()" type="button" id="clear" value="reset">Очистить</button>
+    </div>
+    <div class="formul">
+        <p class="dfp" id="formul1"></p>
+        <p class="dfp" id="formul2"></p>
+        <p class="dfp" id="formul3"></p>
+        <p class="dfp" id="formul4"></p>
+        <p class="dfp" id="formul5"></p>
+        <p class="dfp" id="formul6"></p>
+        <p class="dfp" id="formul7"></p>
+        <p class="dfp" id="formul8"></p>
+        <p class="dfp" id="formul9"></p>
+        <p class="dfp" id="formul10"></p>
+    </div>
 </body>
 </html>

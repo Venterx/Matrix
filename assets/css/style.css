@@ -137,7 +137,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .result-p {
     margin: auto;
-    width: 95px;
+    width: 100px;
 }
 
 .result-q {
@@ -151,8 +151,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .result{
-    height: 31.6px;
-    width: 31.6px;
+    height: 32px;
+    width: 32px;
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid black;
@@ -171,7 +171,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 50px;
 }
 
-.title-determinant p{
+.name-determinant {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     background-color: transparent;
@@ -190,6 +190,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .determinant-btn {
+    margin: auto;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -258,6 +259,30 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-top: 10px;
 }
 
+/* ----------------------------------------------- */
+
+.result-i {
+    width: 100px;
+}
+
+.formul {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 400px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.dfp {
+    width: 350px;
+    padding-top: 10px;
+    background-color: transparent;
+    margin: auto;
+}
+
+/* ----------------------------------------------- */
 
 @media (max-width:430px ) {
     .header p{
@@ -296,5 +321,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .formula p{
         width: 290px;
+    }
+
+    .formul {
+        width: 300px;
+    }
+
+    .dfp {
+        width: 250px;
     }
 }

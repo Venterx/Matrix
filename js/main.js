@@ -171,7 +171,7 @@ function countDeterminant () {
     document.getElementById("determinant").innerHTML = determinant;
 }
 
-function func3() {
+function countDeterminant4by4() {
     const numbers = [
         ["numbr1"],["numbr2"],["numbr3"],["numbr4"],
         ["numbr5"],["numbr6"],["numbr7"],["numbr8"],
@@ -231,4 +231,95 @@ function func3() {
 
     document.getElementById("resultat").innerHTML = resultat;
     document.getElementById("formula").innerHTML = formula;
+}
+
+function countDeterminant4by4() {
+    const numbers = [
+        ["NUMBER1"],["NUMBER2"],["NUMBER3"],
+        ["NUMBER4"],["NUMBER5"],["NUMBER6"],
+        ["NUMBER7"],["NUMBER8"],["NUMBER9"]
+    ];
+
+    numbers.forEach(([NUMBER])=> {
+        window[NUMBER] = Number(document.getElementById(NUMBER).value);
+    });
+
+    NUMBER1 = NUMBER1 === '' ? 0 : NUMBER1;
+    NUMBER2 = NUMBER2 === '' ? 0 : NUMBER2;
+    NUMBER3 = NUMBER3 === '' ? 0 : NUMBER3;
+    NUMBER4 = NUMBER4 === '' ? 0 : NUMBER4;
+    NUMBER5 = NUMBER5 === '' ? 0 : NUMBER5;
+    NUMBER6 = NUMBER6 === '' ? 0 : NUMBER6;
+    NUMBER7 = NUMBER7 === '' ? 0 : NUMBER7;
+    NUMBER8 = NUMBER8 === '' ? 0 : NUMBER8;
+    NUMBER9 = NUMBER9 === '' ? 0 : NUMBER9;
+    
+    if (NUMBER1.value != '') {
+        REST1 = (NUMBER5 * NUMBER9) - (NUMBER8 * NUMBER6);
+        RESTY2 = (NUMBER2 * NUMBER9) - (NUMBER8 * NUMBER3);
+        REST3 = (NUMBER2 * NUMBER6) - (NUMBER5 * NUMBER3);
+        RESTY4 = (NUMBER4 * NUMBER9) - (NUMBER7 * NUMBER6);
+        REST5 = (NUMBER1 * NUMBER9) - (NUMBER7 * NUMBER3);
+        RESTY6 = (NUMBER1 * NUMBER6) - (NUMBER4 * NUMBER3);
+        REST7 = (NUMBER4 * NUMBER8) - (NUMBER7 * NUMBER5);
+        RESTY8 = (NUMBER1 * NUMBER8) - (NUMBER7 * NUMBER2);
+        REST9 = (NUMBER1 * NUMBER5) - (NUMBER4 * NUMBER2);
+        REST2 = RESTY2 * -1;
+        REST4 = RESTY4 * -1;
+        REST6 = RESTY6 * -1;
+        REST8 = RESTY8 * -1;
+        formul1 = `(${NUMBER5} * ${NUMBER9}) - (${NUMBER8} * ${NUMBER6}) = ${REST1}`;
+        formul2 = `(${NUMBER2} * ${NUMBER9}) - (${NUMBER8} * ${NUMBER3}) * -1 = ${REST2}`;
+        formul3 = `(${NUMBER2} * ${NUMBER6}) - (${NUMBER5} * ${NUMBER3}) = ${REST3}`;
+        formul4 = `(${NUMBER4} * ${NUMBER9}) - (${NUMBER7} * ${NUMBER6}) * -1 = ${REST4}`;
+        formul5 = `(${NUMBER1} * ${NUMBER9}) - (${NUMBER7} * ${NUMBER3}) = ${REST5}`;
+        formul6 = `(${NUMBER1} * ${NUMBER6}) - (${NUMBER4} * ${NUMBER3}) * -1 = ${REST6}`;
+        formul7 = `(${NUMBER4} * ${NUMBER8}) - (${NUMBER7} * ${NUMBER5}) = ${REST7}`;
+        formul8 = `(${NUMBER1} * ${NUMBER8}) - (${NUMBER7} * ${NUMBER2}) * -1 = ${REST8}`;
+        formul9 = `(${NUMBER1} * ${NUMBER5}) - (${NUMBER4} * ${NUMBER2}) = ${REST9}`;
+    }
+
+    const Results = [REST1, REST2, REST3, REST4, REST5, REST6, REST7, REST8, REST9];
+    for (let i = 0; i < Results.length; i++) {
+        document.getElementById(`REST${i + 1}`).innerHTML = Results[i];
+    }
+
+    if (NUMBER1.value != '') {
+        RESULT1 = (NUMBER1 * REST1) + (NUMBER2 * REST4) + (NUMBER3 * REST7);
+        RESULT2 = (NUMBER1 * REST2) + (NUMBER2 * REST5) + (NUMBER3 * REST8);
+        RESULT3 = (NUMBER1 * REST3) + (NUMBER2 * REST6) + (NUMBER3 * REST9);
+        RESULT4 = (NUMBER4 * REST1) + (NUMBER5 * REST4) + (NUMBER6 * REST7);
+        RESULT5 = (NUMBER4 * REST2) + (NUMBER5 * REST5) + (NUMBER6 * REST8);
+        RESULT6 = (NUMBER4 * REST3) + (NUMBER5 * REST6) + (NUMBER6 * REST9);
+        RESULT7 = (NUMBER7 * REST1) + (NUMBER8 * REST4) + (NUMBER9 * REST7);
+        RESULT8 = (NUMBER7 * REST2) + (NUMBER8 * REST5) + (NUMBER9 * REST8);
+        RESULT9 = (NUMBER7 * REST3) + (NUMBER8 * REST6) + (NUMBER9 * REST9);
+    }
+
+    if (NUMBER1.value != '') {
+        sum1 = (NUMBER1 * NUMBER5 * NUMBER9) + (NUMBER2 * NUMBER6 * NUMBER7) + (NUMBER3 * NUMBER4 * NUMBER8);
+        sum2 = (NUMBER3 * NUMBER5 * NUMBER7) + (NUMBER2 * NUMBER4 * NUMBER9) + (NUMBER1 * NUMBER6 * NUMBER8);
+        formul10 = `(${(NUMBER1 * NUMBER5 * NUMBER9)} + ${(NUMBER2 * NUMBER6 * NUMBER7)} + ${(NUMBER3 * NUMBER4 * NUMBER8)}) - (${(NUMBER3 * NUMBER5 * NUMBER7)} + ${(NUMBER2 * NUMBER4 * NUMBER9)} + ${(NUMBER1 * NUMBER6 * NUMBER8)}) = ${(sum1 - sum2)}`;
+    } else {
+        formul10 = "?"
+    }
+
+    
+
+    const RESULTS = [RESULT1, RESULT2, RESULT3, RESULT4, RESULT5, RESULT6, RESULT7, RESULT8, RESULT9];
+    for (let i = 0; i < RESULTS.length; i++) {
+        document.getElementById(`RESULT${i + 1}`).innerHTML = RESULTS[i];
+    }
+
+    document.getElementById("formul1").innerHTML = formul1;
+    document.getElementById("formul2").innerHTML = formul2;
+    document.getElementById("formul3").innerHTML = formul3;
+    document.getElementById("formul4").innerHTML = formul4;
+    document.getElementById("formul5").innerHTML = formul5;
+    document.getElementById("formul6").innerHTML = formul6;
+    document.getElementById("formul7").innerHTML = formul7;
+    document.getElementById("formul8").innerHTML = formul8;
+    document.getElementById("formul9").innerHTML = formul9;
+
+    document.getElementById("formul10").innerHTML = formul10;
 }
